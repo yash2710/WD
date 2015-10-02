@@ -32,91 +32,6 @@
 	 }
 
 
-	.button
-	{
-	width: 150px;
-	padding: 10px;
-	background-color: #FF8C00;
-	box-shadow: -8px 8px 10px 3px rgba(0,0,0,0.2);
-    font-weight:bold;
-	text-decoration:none;
-	}
-
-	#cover
-	{
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:5;
-    width:100%;
-    height:100%;
-    display:none;
-	}
-  #cover1
-	{
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(0,0,0,0.6);
-    z-index:5;
-    width:100%;
-    height:100%;
-    display:none;
-	}
-	#loginScreen
-	{
-    height:380px;
-    width:340px;
-    margin:0 auto;
-    position:relative;
-    z-index:10;
-    display:none;
-	border:5px solid #cccccc;
-	border-radius:10px;
-	}
-
-	#loginScreen:target, #loginScreen:target + #cover
-	{
-    display:block;
-    opacity:2;
-	}
-
-
-	#signup
-	{
-    height:380px;
-    width:340px;
-    margin:0 auto;
-    position:relative;
-    z-index:10;
-    display:none;
-	border:5px solid #cccccc;
-	border-radius:10px;
-	}
-
-	#signup:target, #signup:target + #cover1
-	{
-    display:block;
-    opacity:2;
-	}
-
-	.cancel
-	{
-    display:block;
-    position:absolute;
-    top:3px;
-    right:2px;
-    background:rgb(245,245,245);
-    color:black;
-    height:30px;
-    width:35px;
-    font-size:30px;
-    text-decoration:none;
-    text-align:center;
-    font-weight:bold;
-	}
-
 	.imagel
 	{
 		width:35%;
@@ -154,6 +69,11 @@
 		width:90%;
 		height:250px;
 	}
+	
+	.modal-title
+	{
+		color:black;
+	}
   </style>
 </head>
 <body>
@@ -167,31 +87,15 @@
 			<div class="col-sm-2"></div>
 			<div class="col-sm-5">
 				<ul class="nav navbar-nav navbar-right">
-				<li><a href="#signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="#loginScreen"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li><a href="#myModal"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a href="#myModal1" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			   </ul>
 			</div>
-			<div id="loginScreen">
-				<a href="#" class="cancel">&times;</a>
-				<form>
-				Name: <input type="text" name="full_name" placeholder="enter your name">
-				</form>
-			</div>
-      <div id="cover" >
-      </div>
-      <div id="signup">
-
-				<a href="#" class="cancel">&times;</a>
-			</div>
-
-			<div id="cover1" >
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+			
 	</div>
-	<br><br>
+	<br><br><br>
 
-				<div class="s">
+				<!--<div class="s">
                 <div class="imagel">
 					<img src="practice.jpg" class="img-rounded" alt="Practice Sets" />
 				</div>
@@ -203,7 +107,7 @@
 
 				<div class="s">
                 <div class="imager">
-					<img src="exam.jpg" class="img-rounded" alt="Mock Tests"/>
+					<img src="exam.png" class="img-rounded" alt="Mock Tests"/>
 				</div>
                 <div class="contentl">
                     <h2>MOCK TESTS</h2>
@@ -220,6 +124,83 @@
                     <h2>PROGRESS REPORT</h2>
                     <h3>Improve on your weak areas and see your progress curve go up.</h3>
                 </div>
+				</div>-->
+				
+				
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+	<div class="modal-content">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<center><h3 class="modal-title">Sign Up</h3></center>
+        </div>
+        <div class="modal-body">
+			<form class="form-horizontal" role="form" action="test_php_database.php" method="POST">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Email:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="email" placeholder="Enter username" required name="email">
 				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Password:</label>
+				<div class="col-sm-10"> 
+				  <input type="password" class="form-control" id="pwd" placeholder="Enter password" required name="password">
+				</div>
+			</div>
+			  
+			<div class="form-group"> 
+				<div class="col-sm-offset-2 col-sm-10">
+				  <input type="submit" class="btn btn-info" value="Sign Up" name="btn_signup">
+				</div>
+			</div>
+			</form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+	<div class="modal-content">
+        <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<center><h3 class="modal-title">Login</h3></center>
+        </div>
+        <div class="modal-body">
+			<form class="form-horizontal" role="form" action="test_php_database.php" method="POST">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Email:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="email" placeholder="Enter username" required name="email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Password:</label>
+				<div class="col-sm-10"> 
+				  <input type="password" class="form-control" id="pwd" placeholder="Enter password" required name="password">
+				</div>
+			</div>
+			  
+			<div class="form-group"> 
+				<div class="col-sm-offset-2 col-sm-10">
+				  <input type="submit" class="btn btn-info" value="Login" name="btn_login">
+				</div>
+			</div>
+			</form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
 </body>
 </html>
