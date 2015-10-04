@@ -24,7 +24,8 @@ if ($conn->connect_error) {
 }
 else
 {
-	$email=$_POST["email"];
+	session_start();
+	$_SESSION[email]=$_POST["email"];
 	$password=$_POST["password"];
 }
 
@@ -60,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 	if (isset($_POST['btn_login'])) 
 	{
-		$sql="SELECT `password` FROM `login` WHERE email='$email'";
+		$sql="SELECT `password` FROM `login` WHERE email='$_SESSION[email]'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
@@ -70,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 			//echo "id: " . $row["password"];
 			if($row["password"]==$password)
 			{
-				echo '<script> window.location="page2.html"; </script>';
+				echo '<script> window.location="page2.php"; </script>';
 			}
 			else 
 				{
