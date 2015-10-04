@@ -1,0 +1,78 @@
+<style>
+  .row
+  {
+  height:50px;
+  font-size:25px;
+  font:bold;
+  }
+
+  .icon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+      background-color: darksalmon;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      left: 500px;
+  }
+  a
+  {
+  color:white;
+  }
+
+  a:hover
+  {
+  color:blue;
+  }
+
+.jumbotron
+ {
+  background-color:#660033;
+  color:white;
+ }
+
+
+.imagel
+{
+  width:35%;
+  height:200px;
+  float:left;
+  positive:relative;
+}
+
+.imager
+{
+  width:35%;
+  height:200px;
+  float:right;
+  positive:relative;
+}
+
+.contentr
+{
+  width:65%;
+  height:200px;
+  float:right;
+  positive:relative;
+}
+
+.contentl
+{
+  width:65%;
+  height:200px;
+  float:left;
+  positive:relative;
+}
+
+.s
+{
+  width:90%;
+  height:250px;
+}
+
+.modal-title
+{
+  color:black;
+}
+</style>
