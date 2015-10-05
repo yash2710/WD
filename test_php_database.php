@@ -1,4 +1,7 @@
+<?php session_start();
+$_SESSION['email']=$_POST["email"];?>
 <!DOCTYPE html>
+
 <html>
 <head>
 	<style>
@@ -32,8 +35,6 @@ else
 {
 
     //echo "hi";
-	session_start();
-	$_SESSION['email']=$_POST["email"];
     //echo "hi";
 	$email=$_POST["email"];
 	$password=$_POST["password"];
@@ -71,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 	if (isset($_POST['btn_login'])) 
 	{
-		$sql="SELECT `password` FROM `login` WHERE email='".$_SESSION['email']."'";
+		$sql="SELECT `password` FROM `login` WHERE email='".$email."'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {

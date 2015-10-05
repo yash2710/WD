@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 <head>
   <title>Welcome!</title>
@@ -11,7 +12,6 @@
 </head>
 <body>
 <?php
-	session_start();
 	$type=$_SESSION['type'];
 	if ($_GET['link']=='111') 
 	{
