@@ -10,7 +10,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <?php
 	session_start();
 	$type=$_SESSION['type'];

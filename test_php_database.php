@@ -22,7 +22,6 @@ $mysql = "wddbms";
 $username = "root";
 $password = "";
 
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $mysql);
 // Check connection
