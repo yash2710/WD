@@ -12,10 +12,15 @@
 <body>
 <br>
 <?php
-$servername = "mysql5.000webhost.com";
+/*$servername = "mysql5.000webhost.com";
 $mysql = "a5857919_wddbms";
 $username = "a5857919_wddbms";
-$password = "yash2710";
+$password = "yash2710";*/
+
+$servername = "localhost";
+$mysql = "wddbms";
+$username = "root";
+$password = "";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $mysql);
@@ -26,10 +31,10 @@ if ($conn->connect_error) {
 else
 {
 
-    echo "hi";
+    //echo "hi";
 	session_start();
 	$_SESSION[email]=$_POST["email"];
-    echo "hi";
+    //echo "hi";
 	$email=$_POST["email"];
 	$password=$_POST["password"];
 }
