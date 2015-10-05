@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 	if (isset($_POST['btn_login'])) 
 	{
-		$sql="SELECT `password` FROM `login` WHERE email='$_SESSION[email]'";
+		$sql="SELECT `password` FROM `login` WHERE email='".$_SESSION['email']."'";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
