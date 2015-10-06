@@ -74,10 +74,10 @@ if ($result->num_rows > 0) {
 <div class="radio">
   <label><input type="radio" name="optradio" value="2"><?php echo $o2;?></label>
 </div>
-<div class="radio disabled">
+<div class="radio">
   <label><input type="radio" name="optradio" value="3"><?php echo $o3;?></label>
 </div>
-<div class="radio disabled">
+<div class="radio">
   <label><input type="radio" name="optradio" value="4"><?php echo $o4;?></label>
 </div>
 		</div><br>
