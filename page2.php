@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+$_SESSION['cnt']=0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,20 +19,30 @@
 		  width:100%;  
 		  
 	  }
-	  a:hover
-	  {
-		  color:black;
-	  }
+	 
 	  
 		button
 		{
 			width:100%;
+		}
+		#aa
+		{
+			border-radius:2px;
+			color:black;
+			background-color:#FFB2B2;
+			margin:10px;
+		}
+		#aa:hover
+		{
+			background-color:green;
+			color:white;
 		}
   
   </style>
  </head>
  <body>
 	<?php
+		
 		$email=$_SESSION['email'];
 		
 		
@@ -49,8 +61,8 @@
 	<br>
 	<div class="row" >
 		<div class="col-sm-10 col-sm-offset-1">
-			<ul class="nav nav-tabs nav-justified" >
-				<li class="active"><a href="#quant" style="color:navy" class="a"><h3>Quantitative Reasoning</h3></a></h1></li>
+			<ul class="nav nav-tabs nav-justified" style="background-color:#81818C;">
+				<li><a href="#quant" style="color:navy" class="a"><h3>Quantitative Reasoning</h3></a></h1></li>
 				<li><a href="#verbal" style="color:navy"><h3>Verbal Reasoning</h3></a></li>
 			</ul>
 		</div>
@@ -58,88 +70,158 @@
 	</div>	
 	
 	<br><br>
-	<div id="quant">
 	
+	<div id="quant">	
 	<div class="container-fluid">
 	<div class="jumbotron" style="background-color:lavender"> 
 		<div class="row">
-		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
-			
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='111' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='112' style='width:100%'>Mock Test</button>
-			">Numbers</button>
+		<div class="col-sm-3 col-sm-offset-1">			
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Numbers&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q1&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q1&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='121' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='122' style='width:100%'>Mock Test</button>
-			">Average</button>
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Average&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q2&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q2&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		<div class="col-sm-offset-1"></div>
 		</div>
 		
-		<br><br>
+		<br><br><br>
 		
 				<div class="row">
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='131' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='132' style='width:100%'>Mock Test</button>
-			">Probability</button>
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Probability&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q3&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q3&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='141' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='142' style='width:100%'>Mock Test</button>
-			">Statistics</button>
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Statistics&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q4&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q4&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		<div class="col-sm-offset-1"></div>
 		</div>
 		
-		<br><br>
+		<br><br><br>
 				<div class="row">
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='151' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='152' style='width:100%'>Mock Test</button>
-			">Ratio and Indices</button>
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Ratio and Indices&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q5&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q5&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='161' style='width:100%'>Practice Set</button>
-			<br><br>
-			<button type='button' class='btn btn-info' onClick='my_function1()' name='162' style='width:100%'>Mock Test</button>
-			">Profit and Loss</button>
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Profit and Loss&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=q6&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=q6&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
 		</div>
 		<div class="col-sm-offset-1"></div>
 		</div>
 	</div>
 	</div>
-	</div>
+	</div>	
 	
-	<script>
-		$(document).ready(function(){
-			$('[data-toggle="popover"]').popover(); 
-		});
+	<div id="verbal">	
+	<div class="container-fluid">
+	<div class="jumbotron" style="background-color:lavender"> 
+		<div class="row">
+		<div class="col-sm-3 col-sm-offset-1">			
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Playing with Words&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=v1&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=v1&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
+		</div>
 		
-		function my_function1()
-		{
-			
-			 window.location="page3.php?link=q1";
-			 
-			 
-			
-		}
-		</script>
-	
+		<div class="col-sm-3 col-sm-offset-4">
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Text Completion&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=v2&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=v2&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
+		</div>
+		<div class="col-sm-offset-1"></div>
+		</div>
+		
+		<br><br><br>
+		
+				<div class="row">
+		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				  <b>Sentence Equivalence&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=v3&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=v3&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div class="col-sm-3 col-sm-offset-4">
+			<div class="dropdown">
+				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+				 <b>Synonyms&nbsp;&nbsp;</b>
+				  <span class="caret"></span></button>				  
+				  <ul class="dropdown-menu">
+					<li><a href="page3.php?link=v4&test=p" id="aa"><b>Practice Set</b></a></li>
+					<li><a href="page3.php?link=v4&test=m" id="aa"><b>Mock Test</b></a></li>
+				  </ul>
+			</div>
+		</div>
+		<div class="col-sm-offset-1"></div>
+		</div>
+		
+	</div>
+	</div>
+	</div>
  </body>
  </html>
