@@ -1,5 +1,10 @@
+
+<?php session_start();
+$_SESSION['link']=$_GET['link'];
+$_SESSION['qno']=1;
+$_SESSION['marks']=0;
+ ?>
 <!DOCTYPE html>
-<?php session_start(); ?>
 <html lang="en">
 <head>
   <title>Welcome!</title>
@@ -9,19 +14,20 @@
   <link rel="stylesheet" href="./css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-<?php
-	$type=$_SESSION['type'];
-	if ($_GET['link']=='111') 
+  <style>
+	.well
 	{
-		echo '<a href=# class="collapse">click</a>';
-		echo 'hello';
+		background-color:lavender;
+		margin:20px;
+		text:bold;
+		border-radius:5px;
 		
 	}
-	
-	if(isset($_POST['q1'])){echo 'clicked!';}
-?>
+  </style>
+</head>
+
+<body>
+
 	<br>
 	
 	<div class="container-fluid">
@@ -32,5 +38,6 @@
 			<p style="font-size: 25px;">Hello <?php echo $_SESSION['email'];?></p>
 		</div>
 	</div>
+	<iframe src="content.php" width="90%" height="400px" style="margin:20px"></iframe>
 </body>
 </html>
