@@ -35,9 +35,19 @@ $_SESSION['marks']=0;
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="index.html" ><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			 </ul>
-			<p style="font-size: 25px;">Hello <?php echo $_SESSION['email'];?></p>
+			<p style="font-size: 25p;">Hello <?php echo $_SESSION['email'];?></p>
 		</div>
 	</div>
+    <b><p id="timer" style="font-size:40px" class="text-success"></p></b>
+        <script>
+            var a = 12;
+            var redirect = setTimeout(function(){window.location="page3.php";},12000);
+            var interval = setInterval(change,1000);
+            function change(){
+                document.getElementById("timer").innerHTML = Math.floor(a/60)+":"+Math.floor(a%60);
+                a--;
+            }
+        </script>
 	<iframe src="content.php" width="90%" height="400px" style="margin:20px"></iframe>
 </body>
 </html>
