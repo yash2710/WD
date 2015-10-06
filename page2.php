@@ -49,8 +49,8 @@
 	<br>
 	<div class="row" >
 		<div class="col-sm-10 col-sm-offset-1">
-			<ul class="nav nav-tabs nav-justified" style="background-color:#81818C;">
-				<li><a href="#quant" style="color:navy" class="a"><h3>Quantitative Reasoning</h3></a></h1></li>
+			<ul class="nav nav-tabs nav-justified" >
+				<li class="active"><a href="#quant" style="color:navy" class="a"><h3>Quantitative Reasoning</h3></a></h1></li>
 				<li><a href="#verbal" style="color:navy"><h3>Verbal Reasoning</h3></a></li>
 			</ul>
 		</div>
@@ -65,7 +65,7 @@
 		<div class="row">
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
 			
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"   data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='111' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='112' style='width:100%'>Mock Test</button>
@@ -73,7 +73,7 @@
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"  data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='121' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='122' style='width:100%'>Mock Test</button>
@@ -86,7 +86,7 @@
 		
 				<div class="row">
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"  data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='131' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='132' style='width:100%'>Mock Test</button>
@@ -94,7 +94,7 @@
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"  data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='141' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='142' style='width:100%'>Mock Test</button>
@@ -106,7 +106,7 @@
 		<br><br>
 				<div class="row">
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"  data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='151' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='152' style='width:100%'>Mock Test</button>
@@ -114,7 +114,7 @@
 		</div>
 		
 		<div class="col-sm-3 col-sm-offset-4">
-			<button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="focus"  data-html="true" data-content="
+			<button type="button" class="btn btn-primary" data-toggle="popover" data-html="true" data-content="
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='161' style='width:100%'>Practice Set</button>
 			<br><br>
 			<button type='button' class='btn btn-info' onClick='my_function1()' name='162' style='width:100%'>Mock Test</button>
