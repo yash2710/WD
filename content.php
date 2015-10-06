@@ -97,11 +97,12 @@ if ($result->num_rows > 0) {
 			
 		}
 		
-		<?php $_SESSION['qno']=$_SESSION['qno']+1; location.href('content.php');?>
+		<?php $_SESSION['qno']=$_SESSION['qno']+1;?>
+		<?php echo 'window.location="content.php"'; ?>
 		
 	}
 	</script>
-	<?php
+	<!--<?php
 	//$_SESSION['link']=$_GET['link'];
 	if(isset($_POST['g'])){echo 'clicked!';}
 	else 
@@ -111,7 +112,7 @@ if ($result->num_rows > 0) {
 		echo '<script>func1();</script>';
 		
 	}
-?>
+?>-->
 
 
 </body>
