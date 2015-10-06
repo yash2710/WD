@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+
 $servername = "localhost";
 $mysql = "wddbms";
 $username = "root";
@@ -33,7 +34,7 @@ if ($result->num_rows > 0) {
 			if($row = $result->fetch_assoc()) 
 			{
 			//echo "id: " . $row["password"];
-					$question=$row['question'];
+					$question=$row['ques'];
 					$o1=$row['option1'];
 					$o2=$row['option2'];
 					$o3=$row['option3'];
@@ -97,9 +98,43 @@ if ($result->num_rows > 0) {
 			
 		}
 		
-		<?php $_SESSION['qno']=$_SESSION['qno']+1;?>
-		<?php echo 'window.location="content.php"'; ?>
-		
+		<?php
+		$t;
+			if($_SESSION['qno']<3)
+			{
+				
+				$_SESSION['qno']=$_SESSION['qno']+1;
+				
+				echo 'window.location="content.php"'; 
+			}
+			else
+			{
+				$servername = "localhost";
+				$mysql = "wddbms";
+				$username = "root";
+				$password = "";
+
+				
+				$conn = new mysqli($servername, $username, $password, $mysql);
+				
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
+				
+				if(strcmp($_SESSION['link'],"q1")||strcmp($_SESSION['link'],"q2")||strcmp($_SESSION['link'],"q3")||strcmp($_SESSION['link'],"q4")||strcmp($_SESSION['link'],"q5")||strcmp($_SESSION['link'],"q6"))
+				{
+					$t="quant";
+				}
+				else
+					$t="verbal";
+				$sql="insert into `login`(`$t`) values('".$_SESSION['marks']."')";
+				if ($conn->query($sql) === TRUE) 
+				{
+					//header('Location: /index.html');
+					echo 'window.location="result.php";';
+				}
+			}
+		?>
 	}
 	</script>
 	<!--<?php
