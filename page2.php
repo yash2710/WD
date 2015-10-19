@@ -1,5 +1,5 @@
 <?php session_start(); 
-$_SESSION['cnt']=0;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +37,53 @@ $_SESSION['cnt']=0;
 			background-color:green;
 			color:white;
 		}
+		ul 
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}	
+
+		li 
+		{
+			float: left;
+		}
+
+		a:link, a:visited 
+		{
+			display: block;
+			width: 120px;
+			font-weight: bold;
+			color: #FFFFFF;
+			background-color: #98bf21;
+			text-align: center;
+			padding: 4px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		a:hover, a:active
+		{
+			background-color: #7A991A;
+		}
+
   
   </style>
+  
+  <script>
+	function func(id1)
+	{	
+		if(id1.id=="quant1")
+		{
+			document.getElementById("quant").innerHTML="hh";
+		}
+		else if(id1.id=="verbal1")
+		{
+			document.getElementById("quant").innerHTML="<h1>shchhs</h1>";
+		}
+	}
+  </script>
  </head>
  <body>
 	<?php
@@ -52,14 +97,14 @@ $_SESSION['cnt']=0;
 	<div class="container-fluid">
 		<div class="jumbotron">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="index.html" ><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				<li><button onClick="window.location.href='index.html'" class="btn btn-info btn-lg btn-nav" ><span class="glyphicon glyphicon-log-out"></span> Logout</button></li>
 			 </ul>
-			<p style="font-size: 25px;">Hello <?php echo $email; ?></p>
+			<p style="font-size: 30px;">Hello <?php echo $email; ?></p>
 		</div>
 	</div>
 	
 	<br>
-	<div class="row" >
+	<!--<div class="row" >
 		<div class="col-sm-10 col-sm-offset-1">
 			<ul class="nav nav-tabs nav-justified" style="background-color:#81818C;">
 				<li><a href="#quant" style="color:navy" class="a"><h3>Quantitative Reasoning</h3></a></h1></li>
@@ -67,13 +112,18 @@ $_SESSION['cnt']=0;
 			</ul>
 		</div>
 		<div class="col-sm-offset-1"></div>
-	</div>	
+	</div>-->
+	<ul>
+  <li><a href="#" id="quant1" onclick="func(this);return false;" >Home</a></li>
+  <li><a href="#" id="verbal1" onclick="func(this);return false;">News</a></li>
+</ul>
+		
 	
 	<br><br>
 	
-	<div id="quant">	
+		
 	<div class="container-fluid">
-	<div class="jumbotron" style="background-color:lavender"> 
+	<div class="jumbotron" style="background-color:lavender" id="quant"> 
 		<div class="row">
 		<div class="col-sm-3 col-sm-offset-1">			
 			<div class="dropdown">
