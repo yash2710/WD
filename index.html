@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Home</title>
@@ -32,7 +32,27 @@
 		margin-top:50px;
 		margin-left:2px
 	}
-	
+	.a{
+		display: inline-block;
+		margin-left:400px;
+	}
+	@keyframes myanim{
+		0%{left: 0px;}
+		100%{left: 500px;}
+	}
+	@-webkit-keyframes myanim{
+		0%{left: 0px;}
+		100%{left: 500px;}
+	}
+	.image{
+		float: left;
+		
+	}
+	.image img{
+		margin: 5px;
+		-webkit-animation: myanim 10s linear 1s infinite alternate;
+		animation: myanim 10s linear 1s infinite alternate;
+	}
   </style>
   <script>
   var s=["PRACTICE SET","MOCK TEST", "PROGRESS REPORT"];
@@ -59,7 +79,12 @@
      </ul>
 		<p style="font-size: 40px;"><span class="glyphicon glyphicon-education"> Quizzz</span></p>
 	</div>
-
+	<div class="a image">
+		<a href="http://gre.renzen.in/All_In_One_GRE.aspx"><img src="5-lb-book-of-gre.jpg" width="100px" height="150px"/></a>
+		<a href="http://gre.renzen.in/All_In_One_GRE.aspx"><img src="agrawal.jpg" width="100px" height="150px"/></a>
+		<a href="http://gre.renzen.in/All_In_One_GRE.aspx"><img src="1000words.jpg" width="100px" height="150px"/></a>
+		<a href="http://gre.renzen.in/All_In_One_GRE.aspx"><img src="barrons.jpg" width="100px" height="150px"/></a>
+	</div>
 	<br><br><br>
 	<div style="height:700px; width:300px; position:relative;"> 
     <div class="icon btn-primary">GRE</div>
@@ -114,6 +139,7 @@
     </div>
   </div>
 
+		
   <!-- Modal -->
   <div class="modal fade" id="myModal1" role="dialog">
     <div class="modal-dialog">
@@ -153,5 +179,19 @@
 
 </div>
 </div>
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<ul class="nav navbar-nav">
+    <li><a href="https://docs.google.com/forms/d/1cMQ2GK_geaHMPacYYOUu1XvzusQiGkF_ny54qUcHajY/viewform?usp=send_form" class="btn btn-info btn-lg btn-nav" data-toggle="modal" data-target="#myModal">Feedback</a></li>
+        <li><a href="https://www.google.co.in/maps/@23.1234244,72.5495397,15z" data-toggle="modal" class="btn btn-lg btn-info btn-nav" data-target="#myModal1">Contact Us</a></li>
+     </ul>
+			
+			<br>
+			<small style="float: right;">&copy; 13BCE109 &amp; 13BCE123</small>
+			
+			<br>
+			<br>
+		</div>
+	</div>
 </body>
 </html>
