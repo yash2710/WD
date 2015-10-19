@@ -10,8 +10,24 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
+  <script>
+	jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+		jQuery('.tabs ' + currentAttrValue).fadeIn(400).siblings().hide();
+    });
+});
+  </script>
   <style>
  
 	  .container
@@ -49,43 +65,70 @@
 		{
 			float: left;
 		}
+		.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:black;
+        color:white;
+		text-decoration:none;
+    }
+ 
+    
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
 
-		a:link, a:visited 
-		{
-			display: block;
-			width: 120px;
-			font-weight: bold;
-			color: #FFFFFF;
-			background-color: #98bf21;
-			text-align: center;
-			padding: 4px;
-			text-decoration: none;
-			text-transform: uppercase;
-		}
-
-		a:hover, a:active
-		{
-			background-color: #7A991A;
-		}
-
+		
   
   </style>
   
-  <script>
-	function func(id1)
-	{	
-		if(id1.id=="quant1")
-		{
-			document.getElementById("quant").innerHTML="hh";
-		}
-		else if(id1.id=="verbal1")
-		{
-			document.getElementById("quant").innerHTML="<h1>shchhs</h1>";
-		}
-	}
-  </script>
+  
  </head>
- <body>
+ <body style="background-color:lavenderblush;">
 	<?php
 		
 		$email=$_SESSION['email'];
@@ -113,15 +156,17 @@
 		</div>
 		<div class="col-sm-offset-1"></div>
 	</div>-->
-	<ul>
-  <li><a href="#" id="quant1" onclick="func(this);return false;" >Home</a></li>
-  <li><a href="#" id="verbal1" onclick="func(this);return false;">News</a></li>
-</ul>
-		
 	
-	<br><br>
-	
-		
+	<div class="tabs" >
+	<div class="container-fluid">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Quantitative Reasoning</a></li>
+        <li><a href="#tab2">Verbal Reasoning</a></li>
+        
+    </ul>
+		</div>
+	<div class="tab-content" style="background-color:lavenderblush;">
+        <div id="tab1" class="tab active">
 	<div class="container-fluid">
 	<div class="jumbotron" style="background-color:lavender" id="quant"> 
 		<div class="row">
@@ -211,7 +256,7 @@
 	</div>
 	</div>	
 	
-	<div id="verbal">	
+	<div id="tab2" class="tab">	
 	<div class="container-fluid">
 	<div class="jumbotron" style="background-color:lavender"> 
 		<div class="row">
@@ -247,7 +292,7 @@
 		<div class="col-sm-3 col-sm-offset-1"style="background-color:lavender">
 			<div class="dropdown">
 				  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-				  <b>Sentence Equivalence&nbsp;&nbsp;</b>
+				  <b>Equivalent Sentence</b>
 				  <span class="caret"></span></button>				  
 				  <ul class="dropdown-menu">
 					<li><a href="page3.php?link=v3&test=p" id="aa"><b>Practice Set</b></a></li>
@@ -270,6 +315,8 @@
 		<div class="col-sm-offset-1"></div>
 		</div>
 		
+	</div>
+	</div>
 	</div>
 	</div>
 	</div>
