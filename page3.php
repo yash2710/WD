@@ -52,7 +52,7 @@ $_SESSION['marks']=0;
 	<!--<p id="timer" style="font-size:40px" class="text-success"></p></b>!-->
         <script>
             var a = 120;
-            var redirect = setTimeout(function(){window.location="result.php";},120000);
+            var redirect = setTimeout(function(){window.location="timeout.php";},120000);
             var interval = setInterval(change,1000);
             function change(){
                 document.getElementById("timer").innerHTML = Math.floor(a/60)+":"+Math.floor(a%60);
